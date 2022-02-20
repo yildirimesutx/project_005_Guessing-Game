@@ -5,6 +5,7 @@ const guessBtn = document.querySelector("#guess-btn");
 const report = document.querySelector(".report");
 const attempts = document.querySelector(".attempts");
 const reset =document.querySelector(".reset");
+const form= document.querySelector("#form")
 
 
 let isGameOver = false;
@@ -17,7 +18,8 @@ function randomNumber(){
     return Math.floor(Math.random()*100)+1
 }
 
-guessBtn.addEventListener("click", ()=>{
+guessBtn.addEventListener("click", e=>{
+    e.preventDefault()
     if(isGameOver) return
 
 
@@ -44,7 +46,8 @@ guessBtn.addEventListener("click", ()=>{
             report.innerText = `You run out of attempts! The answer was ${answer}.`
             isGameOver=true
         }
-     }     
+     } 
+     form.reset()    
 })
 
 reset.addEventListener("click", ()=>{

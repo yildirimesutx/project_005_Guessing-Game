@@ -72,9 +72,16 @@ main{
     body{
         background-image: url(back2.jpg) ;
         background-repeat: no-repeat;
-  background-size: 500px 700px;
-
+        background-size: 500px 700px;
     }
+    #guess-btn{
+        border-radius: 30px 30px 30px 30px;
+    }
+    #guess-number{
+        margin: 0px;
+        border-radius: 30px 30px 30px 30px;
+        width: 100px;} 
+
 }
 
 
